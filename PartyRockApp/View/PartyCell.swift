@@ -21,7 +21,23 @@ class PartyCell: UITableViewCell {
     // Pass info to the app every time a cell is created
     func updateUI(partyRock: PartyRock) {
         videoTitle.text = partyRock.videoTitle
-        // TODO: Set image from URL
+        
+        // When downloading stuff from the internet it should be ASYNC
+        let url = URL(string: partyRock.imageURL)! // We unwrap because we are sure it does exist
+        
+        // Creates a thread in the background (IT CANNOT UPDATE THE VIEWS, ONLY DOES OPERATIONS)
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                
+                // Will use the MAIN thread (IS ABLE TO UPDATE THE UI)
+                DispatchQueue.global().sync {
+                    self.videoPreviewImage.image = UIImage(data: data)
+                }
+            } catch {
+                // Error handling
+            }
+        }
     }
     
 }
