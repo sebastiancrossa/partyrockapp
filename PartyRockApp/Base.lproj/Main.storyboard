@@ -153,19 +153,35 @@
                                     <constraint firstAttribute="height" constant="257" id="7SD-UG-fNq"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rda-gr-AYp">
+                                <rect key="frame" x="5" y="300" width="365" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="tM9-XM-76l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85263671875000002" green="0.85263671875000002" blue="0.85263671875000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Rda-gr-AYp" firstAttribute="leading" secondItem="bLg-Du-z3u" secondAttribute="leading" constant="5" id="4M2-K4-bWa"/>
                             <constraint firstItem="z3n-wj-LGA" firstAttribute="trailing" secondItem="bLg-Du-z3u" secondAttribute="trailing" id="DAm-ha-Z3W"/>
+                            <constraint firstItem="bLg-Du-z3u" firstAttribute="trailing" secondItem="Rda-gr-AYp" secondAttribute="trailing" constant="5" id="GFp-vk-glx"/>
                             <constraint firstItem="z3n-wj-LGA" firstAttribute="leading" secondItem="bLg-Du-z3u" secondAttribute="leading" id="RXn-Eb-qsQ"/>
+                            <constraint firstItem="Rda-gr-AYp" firstAttribute="top" secondItem="z3n-wj-LGA" secondAttribute="bottom" constant="43" id="ke3-eb-2Ip"/>
                             <constraint firstItem="z3n-wj-LGA" firstAttribute="top" secondItem="Se9-3O-aGN" secondAttribute="top" id="vPR-pJ-sxd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bLg-Du-z3u"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="Rda-gr-AYp" id="r7m-Rx-f1R"/>
+                        <outlet property="webView" destination="z3n-wj-LGA" id="O0B-lc-H4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVk-e7-imO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848.79999999999995" y="137.18140929535232"/>
+            <point key="canvasLocation" x="902" y="138"/>
         </scene>
     </scenes>
     <resources>

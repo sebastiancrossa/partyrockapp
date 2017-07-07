@@ -27,6 +27,7 @@ class PartyRock {
         return _videoTitle
     }
     
+    // Initializers
     init(imageURL: String, videoURL: String, videoTitle: String) {
         _imageURL = imageURL
         _videoURL = videoURL
