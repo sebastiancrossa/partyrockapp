@@ -19,6 +19,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides/>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="271" width="375" height="396"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="82" id="xkj-IT-UIV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PartyCell" rowHeight="82" id="xkj-IT-UIV" userLabel="Party Cell" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xkj-IT-UIV" id="6ol-y5-LJQ">
@@ -103,6 +104,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95476562499999995" green="0.48693933552906266" blue="0.32603371279287091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="qUW-Us-Lhr" id="s3x-kc-ktX"/>
+                                            <outlet property="videoTitle" destination="lSh-YT-b7b" id="MHd-sK-RED"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -124,6 +129,7 @@
                         <viewLayoutGuide key="safeArea" id="VPi-hB-MXX"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="OU8-g6-Knl" id="YrJ-UZ-6gL"/>
                         <segue destination="teH-XU-CcF" kind="showDetail" identifier="VideoVC" id="jkA-jO-Fgd"/>
                     </connections>
                 </viewController>
